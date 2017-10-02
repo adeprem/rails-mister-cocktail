@@ -24,17 +24,6 @@
   <div class="row">
     <%= simple_form_for [@cocktail, @dose] do |f| %>
     <h4>Add your dose</h4>
-    <% [@cocktail, @dose].each do |item| %>
-    <% if item.errors.any? %>
-    <div id="error_explanation">
-      <ul>
-        <% item.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-    <% end %>
-    <% end %>
     <%= f.input :description, label: 'Dose', error: 'Please enter a dose' %> <br>
     <%= f.input :ingredient_id, label: "Ingredient", collection: @ingredients, error: 'Please pick an ingredient' %> <br>
     <br>
