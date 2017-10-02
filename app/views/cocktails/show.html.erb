@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row text-center">
+<h3>  <%= @cocktail.name %></h3>
+
+</div>
+<br>
+<br>
+<div class="row">
+<% @cocktail.doses.each do |dose| %>
+    <div class="col-xs-12 col-sm-4">
+  <div class="card black-text">
+    <h5>Ingredient:</h5>
+    <p>  <%=dose.description %> of <%=dose.ingredient.name %></p>
+    <%= link_to "Delete", dose_path(dose),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+</div>
+</div>
+<% end %>
+</div>
+
+
+
+<div class="row">
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+<h4>Add your dose</h4>
+<%= f.input :description, label: 'Dose (in cl)', error: 'Please enter a dose' %> <br>
+<%= f.input :ingredient_id, label: "Ingredient", collection: @ingredients %> <br>
+<br>
+<%= f.submit "Add an ingredient", class: "btn btn-primary" %>
+<% end %>
+</div>

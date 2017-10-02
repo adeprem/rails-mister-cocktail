@@ -1,0 +1,15 @@
+<%= simple_form_for @cocktail do |f| %>
+<% if @cocktail.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @cocktail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<%= f.input :name, label: "cocktail's name", error: 'Please enter a name' %> <br>
+
+  <br>
+  <%= f.submit "add a cocktail", class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,61 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "layouts/index";
+@import "components/index";
+@import "pages/index";
+
+a {
+  color: #702632;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+a:hover {
+  color: #5C2029;
+}
+
+h3 {
+  color: #702632;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h5 {
+  color: #702632;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 25px;
+}
+
+.btn {
+  background-color: #702632;
+  border: none
+
+}
+
+.btn:hover {
+  background-color: #5C2029;
+}
+
+.card-description a {
+  color: white;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.card-description p {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.black-text {
+  color: black
+}

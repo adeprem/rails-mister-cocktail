@@ -1,0 +1,11 @@
+// Import your components CSS files here.
+@import "alert";
+@import "navbar";
+@import "card";
+
+body {
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  background-color: #F6F5F8;
+  margin-bottom: 30px;
+}
