@@ -15,7 +15,7 @@
   <h5>Ingredients:</h5>
     <% @cocktail.doses.each do |dose| %>
     <div class="col-xs-12 col-sm-4">
-      <div class="card black-text">
+      <div class="card-review black-text">
         <h5>Ingredient:</h5>
         <p>  <%=dose.description %> of <%=dose.ingredient.name %></p>
         <%= link_to "Delete", dose_path(dose),
