@@ -4,8 +4,8 @@
 
 <div class="container">
   <div class="row text-center">
-  <% if @cocktail.photo %>
-    <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+    <% if @cocktail.photo %>
+      <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
     <% end %>
     <h3>  <%= @cocktail.name %></h3>
   </div>
@@ -37,8 +37,8 @@
     <% end %>
   </div>
 
-<br>
-<br>
+  <br>
+  <br>
   <div class="row">
     <% @cocktail.reviews.each do |review| %>
     <div class="col-xs-12 col-sm-4">
