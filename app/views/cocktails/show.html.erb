@@ -31,7 +31,7 @@
   <h5>Reviews:</h5>
     <% @cocktail.reviews.each do |review| %>
     <div class="col-xs-12 col-sm-4">
-      <div class="card black-text">
+      <div class="card-review black-text">
         <h5>Review:</h5>
         <p>  <%=review.content %></p>
         <p><%= review.rating %>/ 5</p>
