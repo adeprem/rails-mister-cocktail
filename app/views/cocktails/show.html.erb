@@ -4,6 +4,7 @@
 
 <div class="container">
   <div class="row text-center">
+    <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
     <h3>  <%= @cocktail.name %></h3>
   </div>
   <br>
