@@ -34,3 +34,27 @@
     <%= f.submit "Add an ingredient", class: "btn btn-primary" %>
     <% end %>
   </div>
+<div class="row">
+<% @cocktail.reviews.each do |review| %>
+<div class="col-xs-12 col-sm-4">
+  <div class="card black-text">
+    <h5>Review:</h5>
+    <p>  <%=review.content %></p>
+    <p><%= review.rating %>/ 5</p>
+    <br>
+</div>
+</div>
+<% end %>
+</div>
+
+
+
+<div class="row">
+<%= simple_form_for [@cocktail, @review] do |f| %>
+<h4>Add your review</h4>
+<%= f.input :content, label: 'Review', error: 'Please enter a review' %> <br>
+<%= f.input :rating, label: "Rating (please grade from 0 to 5)", collection: 0..5 %> <br>
+<br>
+<%= f.submit "add a review", class: "btn btn-primary" %>
+<% end %>
+</div>
