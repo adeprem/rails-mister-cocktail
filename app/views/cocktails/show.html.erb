@@ -45,7 +45,7 @@
   <div class="col-xs-12 col-sm-6">
   <div class="card-add-ingredient black-text text-center">
     <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <h4>Add your dose</h4>
+    <h4>Add an ingredient</h4>
     <%= f.input :description, label: 'Dose', error: 'Please enter a dose' %> <br>
     <%= f.input :ingredient_id, label: "Ingredient", collection: @ingredients, error: 'Please pick an ingredient' %> <br>
     <br>
